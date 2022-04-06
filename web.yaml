@@ -8,6 +8,19 @@
     max_clients: 5
 
   tasks:
+  - name: Run the equivalent of "apt-get update" as a separate step
+    apt:
+      update_cache: yes
+      
+  - name: Update all packages to their latest version
+    apt:
+      name: "*"
+      state: latest
+
+  - name: Upgrade the OS (apt-get dist-upgrade)
+    apt:
+      upgrade: dist
+    
   - name: Ensure that Apache is installed
     apt: name=apache2 state=present
 
