@@ -9,8 +9,7 @@
 
   tasks:
   - name: Ensure that Apache is installed
-    yum: name=httpd state=present
-    when: ansible_os_family == "RedHat"
+    apt: name=httpd state=present
 
   - name: Start Apache Services
     service: name=httpd enabled=yes state=started
