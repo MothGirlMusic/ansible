@@ -1,5 +1,5 @@
-# ansible
-ansible demo for semaphore on proxmox.
+# Semaphore for Ansible
+Semaphore demo for ansible on proxmox. Very easy even if you don't know ansible.
 
 1. on proxmox, install an lxc with turnkey semaphore (its downloadable as a template.) as well as a remote machine running debian or ubuntu (this uses the "apt" command, which is debian based... or you could change it to yum. but i'm using debian for my tutorial.)
 2. you'll need to create /home/semaphore/.ssh with the mkdir command and chown -R it to semaphore:semaphore because the turnkey distro for some reason forgot or didn't do that!
